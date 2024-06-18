@@ -26,11 +26,11 @@ public class Pet extends NamedEntity {
     private LocalDate birthdate;
 
     @JoinColumn(name = "TYPE_ID")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private PetType type;
 
     @JoinColumn(name = "OWNER_ID")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Owner owner;
 
     public LocalDate getBirthdate() {
