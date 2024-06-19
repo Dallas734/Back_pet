@@ -79,12 +79,12 @@ public class Visit {
     private String type;
 
     @JoinColumn(name = "ASSIGNED_NURSE_ID")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private User assignedNurse;
 
     @JoinColumn(name = "PET_ID", nullable = false)
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     private Pet pet;
 
     @Column(name = "VISIT_START")
